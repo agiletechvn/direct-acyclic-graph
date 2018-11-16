@@ -122,14 +122,15 @@ shuffleRand.Shuffle(len(list), func(i, j int) {
 for i := 0; i < number-1; i = i + 1 {
   dag1.AddEdge(vertexList[list[i]], vertexList[list[i+1]])
 }
+
+dag1 := ExampleRandom(10)
+fmt.Println(dag1)
+
 ```
 
 **the result:**
 
-```json
-dag1 := ExampleRandom(10)
-fmt.Println(dag1)
-
+```sh
 $ go run example_dag.go
 DAG Vertices: 10, Edges: 9, Vertices: [{
 	"id": "52fdfc072182654f163f5f0f9a621d729566c74d10037c4d7bbb0407d1e2c649",
